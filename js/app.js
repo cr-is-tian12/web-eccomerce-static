@@ -1,0 +1,53 @@
+const modalImagen = document.querySelector('#modal-imagen');
+
+if(modalImagen){
+    modalImagen.addEventListener('show.bs.modal', function(evento){
+        // console.log('Mostrando modal')
+        console.log(evento.relatedTarget);//RelatedTarget = objetivo relacionado, esta enlazado con el modal show
+    
+        const enlace = evento.relatedTarget;
+        const rutaImagen = enlace.getAttribute('data-bs-imagen');
+    
+        // console.log(rutaImagen)
+    
+        //Construyendo las imagenes
+        const imagen = document.createElement('IMG');
+        imagen.src = `img/${rutaImagen}.jpg`;
+        imagen.classList.add('img-fluid');
+        imagen.alt = 'Imagen Galeria'
+    
+        const contenidoModal = document.querySelector('.modal-body');
+        contenidoModal.appendChild(imagen)
+        // console.log(imagen)
+    })
+    
+    modalImagen.addEventListener('hidden.bs.modal', function(){
+        // console.log('ocultando')
+        const contenidoModal = document.querySelector('.modal-body');
+        contenidoModal.textContent = '';
+    
+    });
+}
+
+// CODIGO COPIADO DE BOOTSRAP 
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+
