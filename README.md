@@ -5,6 +5,7 @@ páginas con categorias, carrito de compras.
 
 ![Demostración de la tienda](assets/navegación.gif)
 
+
 #Galería
 
 Galería de imágenes usando HTML, CSS y Bootstrap, con JavaScript para manejar la apertura y cierre de un modal que muestra las imágenes en tamaño completo.
@@ -18,10 +19,5 @@ Galería de imágenes usando HTML, CSS y Bootstrap, con JavaScript para manejar 
 - **CSS3**
 - **Bootstrap 5**
 - **JavaScript**
-
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT.
 
 
