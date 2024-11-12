@@ -19,5 +19,3 @@ Galería de imágenes usando HTML, CSS y Bootstrap, con JavaScript para manejar 
 - **CSS3**
 - **Bootstrap 5**
 - **JavaScript**
-
-
